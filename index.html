@@ -1,0 +1,45 @@
+<!--
+  College Jean-Eudes -- (Chris) Xi Yang - 410
+  Concentration Informatique - Roche papier ciseaux
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roche papier ciseaux</title>
+    <link rel="stylesheet" href="./style/global.css">
+    <link rel="stylesheet" href="./style/controls.css">
+    <link rel="stylesheet" href="./style/fonts.css">
+    </head>
+<body>
+
+    <div class="gameContainer">
+        <div id="playerSection">
+            <div class="control" id="playerRock" onclick="rpsDoEndPlayerChoice('rock')"> <img src="./assets/playerassets/rock.png" alt="Roche">Roche</div>
+            <div class="control" id="playerScissors" onclick="rpsDoEndPlayerChoice('cutter')"><img src="./assets/playerassets/cutter.png" alt="Ciseaux">Ciseaux</div>
+            <div class="control" id="playerPaper" onclick="rpsDoEndPlayerChoice('paper')"><img src="./assets/playerassets/paper.png" alt="Papier">Papier</div>
+        </div>
+        <div id="computerSection">
+            <div class="control" id="computerRock"><img src="./assets/cpuassets/rock.png" alt="Rock">Roche</div>
+            <div class="control" id="computerScissors"><img src="./assets/cpuassets/cutter.png" alt="Ciseaux">Ciseaux</div>
+            <div class="control" id="computerPaper"><img src="./assets/cpuassets/paper.png" alt="Papier">Papier</div>
+
+        </div>
+        <div class="gameUI">
+            <h1 id="title"><span>Roche, Papier, Ciseaux!</span></h1>
+            <div id="dialogBox">
+                <h2 class="promptTextHead"><span>Comment Jouer</span></h2>
+                <p class="promptTextBody">Voici un jeu classique de Roche Papier Ciseaux! Choisissez nombre de tours pour commencer. Le choix du joueur est à gauche, celui du CPU à la droite.</p>
+                <h2 class="promptTextHead" style="margin-top: 50px;"><span>Choisissez le nombre de tours</span></h2>
+                <input type="text" name="turns" id="turnsInput" class="promptTextBody" placeholder="3">
+                <input type="button" value="Commencer!" id="startButton" class="promptTextBody" onclick="startGame()">
+                
+            </div>
+        </div>
+    </div>
+        
+    <script src="global.js"></script>
+</body>
+</html>
